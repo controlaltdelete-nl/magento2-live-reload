@@ -31,4 +31,4 @@ php bin/magento deploy:mode:set production
 This can take some time. Make sure you are running `production` mode in ... production. Run developer mode only on you local/development environment.
 
 # Dependencies
-This package has no dependencies, other than `Magento/Framework`. Which is required by Magento by default. For the development we require `phpstan/phpstan` and `magento/marketplace-eqp` for code quality.
+This package has no dependencies, other than `magento/framework`. Which is required by Magento by default. For the development we require `phpstan/phpstan` and `magento/marketplace-eqp` for code quality.
