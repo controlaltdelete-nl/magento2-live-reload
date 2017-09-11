@@ -45,13 +45,12 @@ class AddJavascript extends Template
      */
     public function __construct(
         Template\Context $context,
-        Request $request,
         State $appState,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->appState = $appState;
-        $this->request = $request;
+        $this->request = $context->getRequest();
     }
 
     /**
