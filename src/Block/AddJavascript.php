@@ -18,7 +18,9 @@
 
 namespace ControlAltDelete\LiveReload\Block;
 
+use Magento\Framework\App\State;
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\App\Request\Http as Request;
 
 class AddJavascript extends Template
 {
@@ -26,22 +28,30 @@ class AddJavascript extends Template
     public $_template = 'Javascript.phtml';
 
     /**
-     * @var \Magento\Framework\App\State
+     * @var State
      */
     private $appState;
 
     /**
+     * @var Request
+     */
+    private $request;
+
+    /**
      * @param Template\Context $context
-     * @param \Magento\Framework\App\State $appState
+     * @param Request $request
+     * @param State $appState
      * @param array $data
      */
     public function __construct(
         Template\Context $context,
-        \Magento\Framework\App\State $appState,
+        Request $request,
+        State $appState,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->appState = $appState;
+        $this->request = $request;
     }
 
     /**
@@ -49,9 +59,9 @@ class AddJavascript extends Template
      */
     public function getHostUrl()
     {
-        $scheme = $_SERVER['SERVER_PORT'] == 443 ? 'https' : 'http';
+        $scheme = $this->request->isSecure() ? 'https' : 'http';
 
-        return $scheme . '://' . $_SERVER['HTTP_HOST'] . ':35729';
+        return $scheme . '://' . $this->request->getHttpHost() . ':35729';
     }
 
     /**
@@ -62,7 +72,7 @@ class AddJavascript extends Template
     // @codingStandardsIgnoreLine
     protected function _toHtml()
     {
-        if ($this->_appState->getMode() == \Magento\Framework\App\State::MODE_PRODUCTION) {
+        if ($this->_appState->getMode() == State::MODE_PRODUCTION) {
             return '';
         }
 
