@@ -18,5 +18,5 @@
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
     'ControlAltDelete_LiveReload',
-    __DIR__
+    __DIR__ . '/src'
 );

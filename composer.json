@@ -19,7 +19,7 @@
     },
     "autoload": {
         "files": [
-            "src/registration.php"
+            "registration.php"
         ],
         "psr-4": {
             "ControlAltDelete\\LiveReload\\": "src/"
