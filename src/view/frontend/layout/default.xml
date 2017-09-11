@@ -17,6 +17,6 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <referenceContainer name="before.body.end">
-        <block class="ControlAltDelete\LiveReload\BLock\AddJavascript" as="cad.livereload.addjavascript" />
+        <block class="ControlAltDelete\LiveReload\Block\AddJavascript" as="cad.livereload.addjavascript" />
     </referenceContainer>
 </page>
