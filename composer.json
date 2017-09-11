@@ -1,0 +1,14 @@
+{
+    "name": "controlaltdelete/magento2-live-reload",
+    "description": "Enable Live Reload for Magento 2 when in default or in development mode",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michiel Gerritsen",
+            "email": "michiel@controlaltdelete.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
