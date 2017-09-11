@@ -22,7 +22,9 @@ use Magento\Framework\View\Element\Template;
 
 class AddJavascript extends Template
 {
+    // @codingStandardsIgnoreLine
     public $_template = 'Javascript.phtml';
+
     /**
      * @var \Magento\Framework\App\State
      */
@@ -57,6 +59,7 @@ class AddJavascript extends Template
      *
      * @return string
      */
+    // @codingStandardsIgnoreLine
     protected function _toHtml()
     {
         if ($this->_appState->getMode() == \Magento\Framework\App\State::MODE_PRODUCTION) {

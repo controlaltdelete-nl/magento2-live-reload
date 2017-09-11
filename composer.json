@@ -10,5 +10,25 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "magento/framework": "^100.1"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ControlAltDelete\\LiveReload\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.8.5",
+        "magento/marketplace-eqp": "^1.0"
+    },
+    "repositories": {
+        "magento": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    }
 }

@@ -1,0 +1,13 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+before_script:
+  - composer config -a -g http-basic.repo.magento.com $COMPOSER_MAGENTO_USERNAME $COMPOSER_MAGENTO_PASSWORD
+  - composer install
+
+script:
+  - vendor/bin/phpcs --runtime-set installed_paths vendor/magento/marketplace-eqp --runtime-set ignore_warnings_on_exit 1 --standard=MEQP2 src
+  - vendor/bin/phpstan analyse src
