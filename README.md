@@ -1,4 +1,5 @@
 [![Control Alt Delete.nl](images/ControlAltDelete-Github.png)](https://www.controlaltdelete.nl)
+[![Build Status](https://travis-ci.org/controlaltdelete-nl/magento2-live-reload.svg?branch=master)](https://travis-ci.org/controlaltdelete-nl/magento2-live-reload)
 
 This package can be used to enable Live Reload via the script tag in Magento 2. It will check if you are in production mode or not. If you are not, there will be no output.
 
