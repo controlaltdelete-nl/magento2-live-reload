@@ -10,4 +10,8 @@ before_script:
 
 script:
   - vendor/bin/phpcs --runtime-set installed_paths vendor/magento/marketplace-eqp --standard=MEQP2 src
-  - vendor/bin/phpstan --level=7 analyse src
+  - php -d display_errors=1 vendor/bin/phpstan analyse --level=7 -c phpstan.neon src
+
+cache:
+  - $HOME/.composer
+  - $HOME/.cache/composer

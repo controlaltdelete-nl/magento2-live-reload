@@ -19,8 +19,8 @@
 namespace ControlAltDelete\LiveReload\Block;
 
 use Magento\Framework\App\State;
+use Magento\Framework\App\RequestInterface;
 use Magento\Framework\View\Element\Template;
-use Magento\Framework\App\Request\Http as Request;
 
 class AddJavascript extends Template
 {
@@ -33,13 +33,12 @@ class AddJavascript extends Template
     private $appState;
 
     /**
-     * @var Request
+     * @var RequestInterface
      */
     private $request;
 
     /**
      * @param Template\Context $context
-     * @param Request $request
      * @param State $appState
      * @param array $data
      */
